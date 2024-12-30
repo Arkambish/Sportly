@@ -7,6 +7,7 @@ import { Link, router } from "expo-router";
 import { useGlobalContext } from "../../context/GlobalProvider";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { FIREBASE_AUTH } from "../../FirebaseConfig"; // Ensure this is correct
+import dumbles from "../../assets/images/football.png";
 
 const SignUp = () => {
   const [form, setForm] = useState({
@@ -55,12 +56,12 @@ const SignUp = () => {
       <ScrollView>
         <View className="w-full justify-center min-h-[83vh] px-4 my-6">
           <Image
-            // source={images.logo}
+            source={dumbles}
             resizeMode="contain"
-            className="w-[115px] h-[35px]"
+            className="w-[110px] h-[150px]"
           />
           <Text className="text-white text-2xl font-semibold mt-10 font-psemibold">
-            Sign up to Wefit
+            Sign up to Sportly
           </Text>
           <FormField
             title="Username"

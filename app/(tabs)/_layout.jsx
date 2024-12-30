@@ -1,19 +1,18 @@
 import { Tabs } from "expo-router";
 import React from "react";
 import { View, Text, Image } from "react-native";
-import { useColorScheme } from "@/hooks/useColorScheme";
 import icons from "@/constants/icons";
 
 const TabIcon = ({ icon, color, name, focused }) => {
   return (
-    <View className="items-center justify-center mt-3">
+    <View className="items-center justify-center gap-1 mt-6">
       {focused ? (
         <View className="bg-[#BBF246] rounded-full px-4 py-2 flex-row items-center w-28">
           <Image
             source={icon}
             resizeMode="contain"
             className="w-6 h-6 mr-2"
-            tintColor="#192126" // Icon color inside the pill
+            tintColor="#192126"
           />
           <Text className="font-psemibold w-full text-xs text-[#192126]">
             {name}
@@ -25,7 +24,7 @@ const TabIcon = ({ icon, color, name, focused }) => {
             source={icon}
             resizeMode="contain"
             className="w-6 h-6"
-            tintColor={color} // Inactive icon color
+            tintColor={color}
           />
         </View>
       )}
@@ -42,9 +41,11 @@ export default function TabLayout() {
         tabBarInactiveTintColor: "#CDCDE0",
         tabBarStyle: {
           backgroundColor: "#192126",
-          borderTopWidth: 1,
+          borderRadius: 9999,
           borderTopColor: "#232533",
-          height: 60,
+          height: 65,
+          marginBottom: 10,
+          marginHorizontal: 10,
         },
       }}
     >

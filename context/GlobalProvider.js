@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
-import { FIREBASE_AUTH } from "../FirebaseConfig"; // Ensure you have correct path for firebase config
+import { FIREBASE_AUTH } from "../FirebaseConfig";
 
 const GlobalContext = createContext();
 export const useGlobalContext = () => useContext(GlobalContext);
@@ -20,7 +20,7 @@ const GlobalProvider = ({ children }) => {
         setUser(null);
         setIsLogged(false);
       }
-      setLoading(false); // Once authentication state is determined, set loading to false
+      setLoading(false);
     });
 
     // Cleanup the listener on unmount

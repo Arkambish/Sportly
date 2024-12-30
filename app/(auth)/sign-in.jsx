@@ -5,7 +5,7 @@ import FormField from "../../components/FormField";
 import CustomButton from "../../components/CustomButton";
 import { Link, router } from "expo-router";
 import { useGlobalContext } from "../../context/GlobalProvider";
-import dumbles from "../../assets/icons/image.png";
+import dumbles from "../../assets/images/football.png";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { FIREBASE_AUTH } from "../../FirebaseConfig"; // Assuming this is your firebase configuration file
 import CustomAlert from "../../components/CustomAlert";
@@ -72,10 +72,10 @@ const SignIn = () => {
           <Image
             source={dumbles}
             resizeMode="contain"
-            className="w-[110px] h-[50px]"
+            className="w-[110px] h-[150px]"
           />
           <Text className="text-white text-2xl font-semibold mt-10 font-psemibold">
-            Log in to Wefit
+            Log in to Sportly
           </Text>
           <FormField
             title="Email"
